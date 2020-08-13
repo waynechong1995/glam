@@ -56,7 +56,7 @@ export default class StyleSheet {
     {
       document,
       speedy = !(process.env.NODE_ENV !== 'production') &&
-        !(process.env.NODE_ENV === 'test'),
+      !(process.env.NODE_ENV === 'test'),
       maxLength = oldIE ? 4000 : 65000,
     }: { speedy?: boolean, maxLength?: number, document?: Document } = {},
   ) {
@@ -69,9 +69,15 @@ export default class StyleSheet {
     this.inject();
   }
   makeStyleTag() {
+    const getNonce = (): string => {
+      return document.getElementById('nonceId').innerHTML;
+    };
+
+
     let tag = this.document.createElement('style');
     tag.type = 'text/css';
     tag.setAttribute('data-glamor', '');
+    tag.setAttribute('nonce', getNonce());
     tag.appendChild(this.document.createTextNode(''));
     // todo - use a reference node
     (this.document.head || this.document.getElementsByTagName('head')[0]
