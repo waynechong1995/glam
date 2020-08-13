@@ -69,7 +69,7 @@ export default class StyleSheet {
     this.inject();
   }
   makeStyleTag() {
-    const getNonce = (): string => {
+    const getNonce = () => {
       return document.getElementById('nonceId').innerHTML;
     };
 
