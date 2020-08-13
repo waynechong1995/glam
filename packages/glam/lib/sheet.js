@@ -53,11 +53,11 @@ var oldIE = function () {
 var StyleSheet = function () {
   function StyleSheet() {
     var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-        document = _ref.document,
-        _ref$speedy = _ref.speedy,
-        speedy = _ref$speedy === undefined ? !(process.env.NODE_ENV !== 'production') && !(process.env.NODE_ENV === 'test') : _ref$speedy,
-        _ref$maxLength = _ref.maxLength,
-        maxLength = _ref$maxLength === undefined ? oldIE ? 4000 : 65000 : _ref$maxLength;
+      document = _ref.document,
+      _ref$speedy = _ref.speedy,
+      speedy = _ref$speedy === undefined ? !(process.env.NODE_ENV !== 'production') && !(process.env.NODE_ENV === 'test') : _ref$speedy,
+      _ref$maxLength = _ref.maxLength,
+      maxLength = _ref$maxLength === undefined ? oldIE ? 4000 : 65000 : _ref$maxLength;
 
     _classCallCheck(this, StyleSheet);
 
@@ -80,7 +80,7 @@ var StyleSheet = function () {
       var tag = this.document.createElement('style');
       tag.type = 'text/css';
       tag.setAttribute('data-glamor', '');
-      tag.setAttribute('nonce', getNonce());
+      tag.setAttribute('nonce', 'Y2I4ZmNhY2QtM2U4Ny00MTA4LTlkODUtZDA5NDM1MTBmYWJk');
       tag.appendChild(this.document.createTextNode(''));
       // todo - use a reference node
       (this.document.head || this.document.getElementsByTagName('head')[0]).appendChild(tag);
