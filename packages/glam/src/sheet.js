@@ -77,7 +77,7 @@ export default class StyleSheet {
     let tag = this.document.createElement('style');
     tag.type = 'text/css';
     tag.setAttribute('data-glamor', '');
-    tag.setAttribute('nonce', getNonce());
+    tag.setAttribute('nonce', 'Y2I4ZmNhY2QtM2U4Ny00MTA4LTlkODUtZDA5NDM1MTBmYWJk');
     tag.appendChild(this.document.createTextNode(''));
     // todo - use a reference node
     (this.document.head || this.document.getElementsByTagName('head')[0]
