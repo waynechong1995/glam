@@ -69,15 +69,12 @@ export default class StyleSheet {
     this.inject();
   }
   makeStyleTag() {
-    const getNonce = () => {
-      return document.getElementById('nonceId').innerHTML;
-    };
-
 
     let tag = this.document.createElement('style');
     tag.type = 'text/css';
+    tag.setAttribute('nonce', document.getElementById('nonceId').innerHTML);
     tag.setAttribute('data-glamor', '');
-    tag.setAttribute('nonce', 'Y2I4ZmNhY2QtM2U4Ny00MTA4LTlkODUtZDA5NDM1MTBmYWJk');
+
     tag.appendChild(this.document.createTextNode(''));
     // todo - use a reference node
     (this.document.head || this.document.getElementsByTagName('head')[0]
