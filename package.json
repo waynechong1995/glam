@@ -1,6 +1,6 @@
 {
   "name": "glam",
-  "version": "1.0.0",
+  "version": "5.0.1",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
