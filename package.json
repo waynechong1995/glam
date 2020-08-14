@@ -1,7 +1,22 @@
 {
   "name": "glam",
   "version": "5.0.1",
-  "license": "MIT",
+  "description": "inline css for your jsx",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fbjs": "^0.8.16",
+    "inline-style-prefixer": "^3.0.8"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-loader": "7.1.1",
@@ -17,18 +32,5 @@
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1",
     "yarn": "^1.1.0"
-  },
-  "scripts": {
-    "test": "jest"
-  },
-  "dependencies": {
-    "fbjs": "^0.8.16",
-    "inline-style-prefixer": "^3.0.8"
-  },
-  "workspaces": [
-    "packages/*"
-  ],
-  "private": true,
-  "repository": "https://github.com/threepointone/glam.git",
-  "author": "Sunil Pai <threepointone@fb.com>"
+  }
 }
